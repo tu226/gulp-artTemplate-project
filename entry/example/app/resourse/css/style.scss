@@ -1,0 +1,9 @@
+@import "../../../../../common/utils/reset.css";
+.name{
+    &:after{
+        content: ""
+    }
+}
+.jack{
+    height: 0;
+}

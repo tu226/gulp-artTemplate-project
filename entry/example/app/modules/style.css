@@ -1,0 +1,28 @@
+.ui-com-header {
+  color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.custom-footer {
+  padding-top: 15px; }
+  .custom-footer .footer-link {
+    width: 9.33333rem;
+    margin: 0 auto;
+    height: .74667rem;
+    display: block; }
+  .custom-footer .footer-link a {
+    float: left;
+    margin-right: .13333rem; }
+  .custom-footer .footer-link a:last-child {
+    margin-right: 0; }
+  .custom-footer .footer-link img {
+    width: 2.98667rem;
+    height: auto;
+    display: block; }
+  .custom-footer .footer-info {
+    margin-top: 15px;
+    color: #000;
+    text-align: center;
+    font-size: 10px;
+    line-height: 20px; }

@@ -1,0 +1,5 @@
+{    "title":"我是测试",
+     "require":["header","footer"],
+     "dev":"./app/resourse",
+     "publish":"<!--#echo var='CDN_BASEURL'-->"
+}
