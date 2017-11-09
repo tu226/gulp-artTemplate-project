@@ -17,70 +17,83 @@ npm run build --you project name(项目文件夹)
 
 ```
 .
-├── src                           # 程序源文件
-│   ├── common                 
-│   │     │
-│   │     ├── css                   # resetCss,pxToRem方法
-│   │     │
-│   │     ├── img                   # 图片资源
-│   │     │
-│   │     └── js                    # 工具集
-│   │
-│   ├── components                  
-│   │     │
-│   │     ├──── detailActicle.vue	     # 详情页组件
-│   │     │                
-│   │     ├──── goTop.vue	             # 返回顶部组件
-│   │     │
-│   │     ├──── inputComment.vue	     # 底部输入框组件（详情，评论页面）
-│   │     │
-│   │     ├──── itemActicleList.vue      # 文章列表组件（每条）
-│   │     │
-│   │     ├──── itemAdList.vue	         # 首页广告组件 （每条）
-│   │     │
-│   │     ├──── itemCommentList.vue	     # 评论组件 （每条）
-│   │     │
-│   │     ├──── itemTabContent.vue	     # 首页其他tab滑块内容组件（除了头条首页tab）
-│   │     │
-│   │     ├──── search.vue	             # 搜索组件
-│   │     │
-│   │     └────  showToast.vue            # 提示toast组件 (已废弃) 
+├── common   
 │   │ 
-│   │  
-│   │          
-│   ├── container                  # 页面主组件   
-│   │     │  
-│   │     ├──── comment.vue         # 评论页面app组件
-│   │     │  
-│   │     ├──── detail.vue          # 详情页app组件
-│   │     │  
-│   │     ├──── index.vue           # 详情页app组件
-│   │     │  
-│   │     ├──── patent.vue          # 专栏页app组件
-│   │     │  
-│   │     ├──── search.vue          # 搜索页app组件
-│   │     │  
-│   │     └──── subject.vue         # 专题页app组件
+│   │                      
+│   ├── utils                       # 工具集
+│   │                          
 │   │
-│   │ 
-│   ├── assets                     # 公共图片             
-│   │
-│   └── main.js           	       # 入口文件
+│   └── components                  
+│         │
+│         ├──── footer	            # 组件示例
+│         │        │
+│         │        ├──── dom.art	     # 组件dom
+│         │        │
+│         │        ├──── script.js       # 组件js
+│         │        │
+│         │        ├──── style.scss	     # 组件css         
+│         │        │
+│         │        └──── screenShot.png  # 组件样式截图
+│         │ 
+│         │ 
+│         └──── header	             # 其他组件
+│     
+│      
+│              
+├── entry                           # 多项目开发资源入口   
+│     │  
+│     ├──── example                 # 项目结构举例
+│     │       │ 
+│     │       ├──── app             # 静态资源入口
+│     │       │      │ 
+│     │       │      ├──── modules       # 项目依赖组件（pageConfig.json）的css,js资源合并打包资源
+│     │       │      │        │  
+│     │       │      │        ├──── script.js  
+│     │       │      │        │  
+│     │       │      │        └───── style.css
+│     │       │      │ 
+│     │       │      └───── resourse 
+│     │       │                 │ 
+│     │       │                 ├──── css  # 项目css
+│     │       │                 │      │
+│     │       │                 │      ├──── index.css   # css 文件（sass编译后文件）
+│     │       │                 │      │
+│     │       │                 │      └──── style.scss  # sass 文件
+│     │       │                 │ 
+│     │       │                 ├──── img  # 项目图片
+│     │       │                 │
+│     │       │                 └──── js   # 项目js
+│     │       │ 
+│     │       │ 
+│     │       │ 
+│     │       ├──── index.art	   # 模板引擎渲染前的混编文件
+│     │       │                 
+│     │       ├──── index.html	    # 模板引擎渲染后的模板文件
+│     │       │                 
+│     │       └──── pageConfig.json # 配置文件，配置项目依赖组件，最终输出占位符替换等
+│     │ 
+│     └────  otherProject            # 其他项目文件 
+│     
 │
 │
-├── build                          # webpack配置文件
+├── gulptask                         # gulp任务文件
 │
-├── config                         # webpack配置文件
-│
-├── index.html                     # 模板文件（数据均在模板全局对象下） 
-│
-├── server.json                    # 首页分页数据异步请求返回的数据格式
-│
-└── 其他文件参照 vue-cli说明
+├── config.js                        # 资源路径配置文件
+│		
+├── gulpfile.js                      # gulp运行文件
+│ 
+└── package.json                     # 依赖
+
 
 ```
 
 ## 其他说明
 
-1. 基于vue-cli脚手架生成
-2. 多页需手动切换main.js中的渲染的app组件，同时切换index.html中的data数据。
+1. 该项目支持多项目开发，通过在npm指令中添加参数：`-- example` 来运行不同的项目。
+2. 每个组件下拆分为html,css,js三块，css,js是通过项目下的 pageConfig.json 来拼接在一起，html采用腾讯的[arttemplate](https://www.awesomes.cn/repo/aui/arttemplate)模板引擎（依然是字符串模版引擎）,语法请自行百度。
+3. art模板引擎引入模板碎片可通过一下方式(模板渲染数据直接通过括号内数据传递即可)：
+
+		<%-include("../../common/components/header/dom.art",{data:"我是头部"})%>
+4.  art模板引擎的数据占位类似{{ mustache }}，两个大括号进行占位
+5.  构建工具的基本原理就是通过配置文件，匹配对象组件文件夹下的文件，分别将html进行处理，打入不同的文件内，
+6.  最终输出文件可以实现占位替换和资源合并，同时可以将图片资源进行压缩
