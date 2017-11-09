@@ -110,4 +110,7 @@ gulp.task('watch-build-task', ['art-render','concat-js','concat-sass'], function
   gulp.watch([filePath.CSSPath + '/*.scss'], ['watch-index-sass']);
   gulp.watch(['*.art', filePath.basePath + '/*.art'],['art-render']);
   gulp.watch(['*.html', filePath.HTMLPath + '/*.html']).on('change', reload);
+  gulp.watch([path.resolve(__dirname,"../common/components/**/*.scss")],['concat-sass',browserSync.reload]);
+  gulp.watch([path.resolve(__dirname,"../common/components/**/*.js")],['concat-js',browserSync.reload]);
+  gulp.watch([path.resolve(__dirname,"../common/components/**/*.art")],['art-render']);
 });

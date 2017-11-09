@@ -16,6 +16,7 @@
     <script type="text/javascript" src="http://s29.9956.cn/res/custom/js/jquery.min.js"></script>
 </head>
 <body>
+    <div class="custom-wrap"><%-include("../../common/components/m-custom-submit/dom.art",{classWrap:"wrap-all"})%></div>
     <div class="header"><%-include("../../common/components/header/dom.art",{name:"我是头部"})%></div>
     <img src="./app/resourse/img/pic.png"/>
     <div class="footer"><%-include("../../common/components/footer/dom.art")%></div>

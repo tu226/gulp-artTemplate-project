@@ -1,5 +1,5 @@
 {    "title":"我是测试",
-     "require":["header","footer"],
+     "require":["header","footer","m-custom-submit"],
      "dev":"./app/resourse",
      "publish":"<!--#echo var='CDN_BASEURL'-->"
 }

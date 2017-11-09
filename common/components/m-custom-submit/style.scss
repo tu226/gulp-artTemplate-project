@@ -1,0 +1,188 @@
+//pixels to rems
+@function pxToRem($px) {
+    @return $px / 75px * 1rem;
+  }
+  
+.custom-board-component {
+    width: pxToRem(688px);
+    margin: 0 auto;
+    border: 1px solid #bfbfbf;
+    background-color: #fff;
+    position: relative;
+    padding-bottom: pxToRem(50px);
+    ul {
+        padding: pxToRem(45px) 0 0 pxToRem(35px);
+    }
+    .to-who {
+        span {
+            font-weight: 700
+        }
+        img {
+            width: pxToRem(100px);
+            height: auto
+        }
+        i {
+            display: block;
+            text-align: center;
+            height: pxToRem(40px);
+            width: pxToRem(78px);
+            line-height: pxToRem(40px);
+            border: 1px solid #ccc;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            margin: pxToRem(10px) auto;
+        }
+        dd.on i {
+            background-color: #ff5b11;
+            color: #fff
+        }
+        dd {
+            float: left;
+            display: block;
+            margin-right: pxToRem(68px);
+            margin-top: pxToRem(30px);
+        }
+        dd:nth-of-type(4) {
+            margin-right: 0
+        }
+    }
+    .to-who:after,
+    .who-wrap:after {
+        content: "";
+        clear: both;
+        display: block;
+        height: 0
+    }
+    .to-where {
+        position: relative;
+        margin-top: pxToRem(38px);
+        span {
+            font-weight: 700;
+            position: absolute;
+            top: pxToRem(10px);
+            left: 0
+        }
+        dl {
+            margin-left: pxToRem(158px);
+        }
+        dl:after {
+            content: "";
+            clear: both;
+            display: block;
+            height: 0;
+        }
+        dd {
+            display: block;
+            text-align: center;
+            height: pxToRem(55px);
+            width: pxToRem(128px);
+            line-height: pxToRem(55px);
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin-right: pxToRem(18px);
+            margin-bottom: pxToRem(18px);
+            float: left;
+        }
+        dd:nth-of-type(3n) {
+            margin-right: 0;
+        }
+        dd.on {
+            background-color: #ff5b11;
+            color: #fff
+        }
+    }
+    .user-name,
+    .user-tel {
+        margin-bottom: pxToRem(28px);
+        span {
+            float: left;
+            font-weight: 700;
+            line-height: pxToRem(66px);
+        }
+        div {
+            padding-left: pxToRem(142px);
+        }
+        input {
+            padding-left: pxToRem(18px);
+            height: pxToRem(66px);
+            width:pxToRem(436px);
+            line-height: pxToRem(66px);
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            border: 1px solid #ccc
+        }
+    }
+    .submit {
+        width: pxToRem(590px);
+        text-align: center;
+        color: #fff;
+        font-size: 18px;
+        line-height:pxToRem(100px);
+        display: block;
+        margin:0 auto;
+        background-color: #f00;
+        border-radius: pxToRem(100px);
+        box-shadow: inset 0px -4px 8px 0px #9d5f5f;
+    }
+    .tips {
+        font-size: 10px;
+        text-align: center;
+        color: #999;
+        line-height: pxToRem(74px)
+    }
+    .user-adress span {
+        float: left;
+        font-weight: 700;
+        line-height: pxToRem(66px);
+    }
+    #region {
+        padding-left: pxToRem(142px);
+        margin-bottom: pxToRem(28px);
+        height: pxToRem(66px);
+    }
+    #region select {
+        margin-right: pxToRem(18px);
+        height: pxToRem(66px);
+        line-height: pxToRem(66px);
+        border: 1px solid #ccc;
+        border-radius: 0;
+        color: #333;
+        bottom: pxToRem(-28px);
+        width: pxToRem(122px);
+    }
+    .mask{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,.5);
+        z-index: 1001;
+        display: none;
+        .success{
+            width: pxToRem(572px);
+            margin: 0 auto;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            margin-top: pxToRem(-420px);
+        }
+        .confirm-btn{
+            width: pxToRem(452px);
+            height: pxToRem(92px);
+            text-align: center;
+            color: #fff;
+            font-size: 16px;
+            line-height: pxToRem(90px);
+            margin: 0 auto;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: pxToRem(80px);
+            background-color: #f00;
+            border-radius: pxToRem(92px);
+            box-shadow: inset 0px -4px 8px 0px #9d5f5f;
+        }
+    }
+}

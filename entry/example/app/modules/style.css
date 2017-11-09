@@ -26,3 +26,163 @@
     text-align: center;
     font-size: 10px;
     line-height: 20px; }
+
+.custom-board-component {
+  width: 9.17333rem;
+  margin: 0 auto;
+  border: 1px solid #bfbfbf;
+  background-color: #fff;
+  position: relative;
+  padding-bottom: 0.66667rem; }
+  .custom-board-component ul {
+    padding: 0.6rem 0 0 0.46667rem; }
+  .custom-board-component .to-who span {
+    font-weight: 700; }
+  .custom-board-component .to-who img {
+    width: 1.33333rem;
+    height: auto; }
+  .custom-board-component .to-who i {
+    display: block;
+    text-align: center;
+    height: 0.53333rem;
+    width: 1.04rem;
+    line-height: 0.53333rem;
+    border: 1px solid #ccc;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0.13333rem auto; }
+  .custom-board-component .to-who dd.on i {
+    background-color: #ff5b11;
+    color: #fff; }
+  .custom-board-component .to-who dd {
+    float: left;
+    display: block;
+    margin-right: 0.90667rem;
+    margin-top: 0.4rem; }
+  .custom-board-component .to-who dd:nth-of-type(4) {
+    margin-right: 0; }
+  .custom-board-component .to-who:after,
+  .custom-board-component .who-wrap:after {
+    content: "";
+    clear: both;
+    display: block;
+    height: 0; }
+  .custom-board-component .to-where {
+    position: relative;
+    margin-top: 0.50667rem; }
+    .custom-board-component .to-where span {
+      font-weight: 700;
+      position: absolute;
+      top: 0.13333rem;
+      left: 0; }
+    .custom-board-component .to-where dl {
+      margin-left: 2.10667rem; }
+    .custom-board-component .to-where dl:after {
+      content: "";
+      clear: both;
+      display: block;
+      height: 0; }
+    .custom-board-component .to-where dd {
+      display: block;
+      text-align: center;
+      height: 0.73333rem;
+      width: 1.70667rem;
+      line-height: 0.73333rem;
+      border: 1px solid #ccc;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      margin-right: 0.24rem;
+      margin-bottom: 0.24rem;
+      float: left; }
+    .custom-board-component .to-where dd:nth-of-type(3n) {
+      margin-right: 0; }
+    .custom-board-component .to-where dd.on {
+      background-color: #ff5b11;
+      color: #fff; }
+  .custom-board-component .user-name,
+  .custom-board-component .user-tel {
+    margin-bottom: 0.37333rem; }
+    .custom-board-component .user-name span,
+    .custom-board-component .user-tel span {
+      float: left;
+      font-weight: 700;
+      line-height: 0.88rem; }
+    .custom-board-component .user-name div,
+    .custom-board-component .user-tel div {
+      padding-left: 1.89333rem; }
+    .custom-board-component .user-name input,
+    .custom-board-component .user-tel input {
+      padding-left: 0.24rem;
+      height: 0.88rem;
+      width: 5.81333rem;
+      line-height: 0.88rem;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      border: 1px solid #ccc; }
+  .custom-board-component .submit {
+    width: 7.86667rem;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.33333rem;
+    display: block;
+    margin: 0 auto;
+    background-color: #f00;
+    border-radius: 1.33333rem;
+    -webkit-box-shadow: inset 0px -4px 8px 0px #9d5f5f;
+            box-shadow: inset 0px -4px 8px 0px #9d5f5f; }
+  .custom-board-component .tips {
+    font-size: 10px;
+    text-align: center;
+    color: #999;
+    line-height: 0.98667rem; }
+  .custom-board-component .user-adress span {
+    float: left;
+    font-weight: 700;
+    line-height: 0.88rem; }
+  .custom-board-component #region {
+    padding-left: 1.89333rem;
+    margin-bottom: 0.37333rem;
+    height: 0.88rem; }
+  .custom-board-component #region select {
+    margin-right: 0.24rem;
+    height: 0.88rem;
+    line-height: 0.88rem;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    color: #333;
+    bottom: -0.37333rem;
+    width: 1.62667rem; }
+  .custom-board-component .mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    display: none; }
+    .custom-board-component .mask .success {
+      width: 7.62667rem;
+      margin: 0 auto;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      margin-top: -5.6rem; }
+    .custom-board-component .mask .confirm-btn {
+      width: 6.02667rem;
+      height: 1.22667rem;
+      text-align: center;
+      color: #fff;
+      font-size: 16px;
+      line-height: 1.2rem;
+      margin: 0 auto;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 1.06667rem;
+      background-color: #f00;
+      border-radius: 1.22667rem;
+      -webkit-box-shadow: inset 0px -4px 8px 0px #9d5f5f;
+              box-shadow: inset 0px -4px 8px 0px #9d5f5f; }
